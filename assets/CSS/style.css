@@ -87,7 +87,7 @@ body {
 /* --------- Buttons */
 
 .btn {
-    width: 220px;
+    width: 250px;
     height: 60px;
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
@@ -111,6 +111,13 @@ body {
     transition: all 0.5s;
 }
 
+.btn--big::after{
+  content: attr(data-type);
+  font-size: 1rem;
+  color: #445361;
+  position: relative;
+  left: -0.5rem;
+}
 .btn--blue {
     border-color: blue;
     color: blue;
@@ -168,7 +175,69 @@ body {
 }
 
 /* --------- Media queries */
+@media (max-width: 948px){
+    .game-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .controls-area {
+        width: 100%;
+    }
+    .btn--big {
+        margin: 0 10px;
+        padding: 5px;
+        border: 5px solid;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
 
+  
+    .btn--big::after {
+        font-size: 0.6rem;
+        left: -0.7rem;
+    }
+
+    .question-area {
+        padding: 1% 0;
+        width: 100%;
+    }
+
+    .question-area span {
+        padding: 0;
+    }
+
+    .answer-message {
+        display: block;
+    }
+
+    #answer-box {
+        display: block;
+        margin: 0 auto;
+    }
+    .btn--gray {
+        margin-top: 0;
+        margin-bottom: 10px;
+        
+    }
+
+    .score-area {
+        width: 100%;
+    }
+
+    .scores {
+        margin: 0.5em auto;
+        display: block;
+        padding: 5px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+}
 @media (max-width: 414px) {
     .controls-area {
         width: 100%;
